@@ -1,0 +1,14 @@
+canvas {
+  border: 1px solid red;
+  background-color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: url('https://bigmemes.funnyjunk.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg')
+}
