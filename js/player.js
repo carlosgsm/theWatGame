@@ -9,6 +9,7 @@ function Player() {
   this.width = 50;
   this.height = 50;
   this.color = 'green'
+
 }
 
 Player.prototype.movePlayer = function() {
@@ -43,15 +44,22 @@ Player.prototype.movePlayer = function() {
   if(this.isMovingDown === true && this.y + this.height <= canvas.height)this.y += 5;
 }
 
-//Obstaculo
+setInterval(function(){ player.health=player.health-1;}, 1000);
 
+//Function Perdiste, funciona, hay que ver como meterla y donde
 
+// if (player.health <=90){
+//   alert("Perdiste motherfucker")
+// }
 
 
 
 Player.prototype.draw = function() {
   
   ctx.clearRect(0,0,canvas.width,canvas.height)
+  ctx.fillRect(this.x, this.y, this.width, this.height)
+}
+
   // if(this.x > canvas.width) {
   //   ctx.beginPath()
   //   ctx.font = "20px Helvetica";
@@ -60,8 +68,8 @@ Player.prototype.draw = function() {
   //   ctx.closePath()
   // }
   // ctx.beginPath()
-  ctx.fillStyle = 'red';
-  ctx.fillRect(this.x, this.y, this.width, this.height)
-  
+  // ctx.fillRect(this.x, this.y, this.width, this.height)
+  // ctx.drawImage(img, this.x, this.y, 50, 50); 
+
   // ctx.closePath()
-}
+
