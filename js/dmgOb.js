@@ -21,7 +21,6 @@ dmgOb.prototype.collision = function(player) {
     this.y + this.height >= player.y
     ) {
       player.health =player.health-10
-      this.color = 'green'
       this.x = 1000
       console.log('TE QUEMAS')
   }

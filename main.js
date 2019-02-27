@@ -15,8 +15,12 @@ var healthOb = new healthOb();
 
 function game() {
   
-  player.movePlayer()
-  player.draw()
+  
+  player.movePlayer();
+  player.draw();
+  // player.icono(); para cargar la imagen
+  // player.gameOver();
+
   dmgOb.draw();
   dmgOb.collision(player);
   dmgOb2.draw();
@@ -25,14 +29,11 @@ function game() {
   barriers.collision(player); 
   healthOb.draw();
   healthOb.collision(player);
- 
-
-  ctx.fillText("player1_x: " + player.x, 400,40);
-  ctx.fillText("player1_y: " + player.y, 400,60);
-  ctx.fillText("Health: " + player.health, 400,80);
 
 
-  
+  ctx.fillText("player1_x: " + player.x, 10,20);
+  ctx.fillText("player1_y: " + player.y, 10,35);
+  ctx.fillText("Health: " + player.health, 10,50);
 }
 
 var interval = setInterval(game, 1000/60);
