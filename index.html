@@ -5,16 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./main.css">
-  <title>Document</title>
+  <title>The Wat Game</title>
 </head>
 <body>
+    
+<div class='health1'>
+  <progress style="height:24px;width:50%;margin-left:20%" id="health1" value="100" max="100">100%</progress>
+
+</div>
+<div class='health2'>
+    <progress style="height:24px;width:50%;float:right;margin-right:20%" id="health2" value="100" max="100">100%</progress>
+  </div>
+
   <div class="center">
     <canvas id="canvas"></canvas>
   </div>
+
+
+  <!-- <script type="text/javascript" src="js/background.js"></script> -->
+  <script src="js/player.js"></script>
+  <script src="js/player2.js"></script>
   <script src="js/dmgOb.js"></script>
   <script src="js/healthOb.js"></script>
   <script src="js/barriers.js"></script>
-  <script src="js/player.js"></script>
+  
+
   <script src="./main.js"></script>
 </body>
 </html>

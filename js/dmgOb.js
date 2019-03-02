@@ -4,8 +4,9 @@ function dmgOb() {
   this.width = 20;
   this.height = 20;
   this.color = 'blue'
+  
+   }
 
-}
 
 dmgOb.prototype.draw = function () {
   ctx.fillStyle = this.color;
@@ -26,3 +27,10 @@ dmgOb.prototype.collision = function(player) {
   }
 }
 
+// dmgOb.prototype.draw = function draw() {
+//     var img = new Image();
+//      img.onload = function() { 
+//        ctx.drawImage(img, 100, 100, 20, 20); 
+//     }
+//    img.src = "https://media.giphy.com/media/Qr8JE9Hvi7ave/200.gif";
+//   }

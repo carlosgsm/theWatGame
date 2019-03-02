@@ -8,9 +8,9 @@ function Player() {
   this.health = 100;// como le meto limite a la vida? tener 100 como maximo
   this.width = 50;
   this.height = 50;
-  this.color = 'green'
+  this.color = 'red'
   this.speed = 1;
-
+ 
 }
 
 Player.prototype.movePlayer = function() {
@@ -45,23 +45,30 @@ Player.prototype.movePlayer = function() {
   if(this.isMovingDown === true && this.y + this.height <= canvas.height)this.y += 5*this.speed;
 }
 
-setInterval(function(){ player.health=player.health-1;}, 1000);
+setInterval(function(){ player.health=player.health-5;}, 1000);
 
 
 Player.prototype.draw = function() {
-  ctx.clearRect(0,0,canvas.width,canvas.height)
+  ctx.clearRect(0,10,canvas.width,canvas.height)
   ctx.fillRect(this.x, this.y, this.width, this.height)
+
+  }
+Player.prototype.updatePoints= function(){
+  let health1 = document.getElementById("health1")
+  health1.value = this.health;
 }
-
-
 //Function Perdiste, funciona, hay que ver como meterla y donde
-
-// Player.prototype.gameOver = function (){
-// if (player.health <=0){
-//   alert("Perdiste motherfucker player 1")
-//   document.location.reload();
-// }
-// }
+// tampoco me vuelve a pintar todos los objetos, refresh de pagina?
+Player.prototype.gameOver = function (){
+if (this.health <=80){
+  if(confirm("GAME OVER. Play again?")) {
+    player.health =100
+    player2.health =100
+    // document.location.reload(true)
+    // window.location.reload();
+}
+}
+}
 
 //// funciona, pero no se mueve
 // Player.prototype.icono = function draw(ghost) {
@@ -72,7 +79,6 @@ Player.prototype.draw = function() {
 //   img.src = "https://media.giphy.com/media/Qr8JE9Hvi7ave/200.gif";
 // }
 // ////
-
 
 
 

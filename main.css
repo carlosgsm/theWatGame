@@ -4,11 +4,34 @@ canvas {
 }
 
 .center {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  background-color:blueviolet;
+  padding-top: 100px;
+
+
 }
 
 body {
   background-image: url('https://bigmemes.funnyjunk.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg')
+}
+.health1{
+  height:50px;
+  width:50%;
+  background-color: red;
+  float: left;
+  margin-top: 50px;
+  
+}
+
+.health2{
+  height:50px;
+  width:50%;
+  background-color:green;
+  float: left;
+    margin-top: 50px;
+
+  
 }
