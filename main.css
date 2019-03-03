@@ -1,6 +1,6 @@
 canvas {
   border: 1px solid red;
-  background-color: white;
+  background-image: url('images/lava.png')
 }
 
 .center {
@@ -8,30 +8,44 @@ canvas {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:blueviolet;
-  padding-top: 100px;
-
 
 }
 
 body {
-  background-image: url('https://bigmemes.funnyjunk.com/thumbnails/comments/Just+when+i+thought+quotoh+thats+enough+nasty+_5a0591bbbea7ad8c9e4dfb767e9c1b74.jpg')
+  background-image: url('https://images-na.ssl-images-amazon.com/images/I/61MqJc3crjL._SX466_.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 .health1{
-  height:50px;
+  height:150px;
   width:50%;
-  background-color: red;
+  /* background-color: red; */
   float: left;
-  margin-top: 50px;
-  
+  margin-top: 5px;
+
 }
 
 .health2{
-  height:50px;
+  height:150px;
   width:50%;
-  background-color:green;
-  float: left;
-    margin-top: 50px;
+  /* background-color:green; */
+  float: right;
+  margin-top: 5px;
+}
+.pic1{
+  height:100px;
+  width:100px;
+  content: url('http://static2.fjcdn.com/thumbnails/comments/Yeah+well+no+one+is+forcing+you+to+be+a+_2920236a3bc973de27a119933a63920f.png');
+  margin-left: 35%;
+  float:left;
 
-  
+}
+.pic2{
+  height:100px;
+  width:100px;
+  content: url('http://plazmaburst2.com/forum/download/file.php?avatar=32547_1454800966.png');
+  float:right;
+  margin-right: 35%;
+
 }

@@ -56,6 +56,5 @@ function Player2() {
       health2.value = this.health;
     }
 
-    setInterval(function(){ player2.health=player2.health-15;}, 1000);
-
-  
+    setInterval(function(){
+      if (player2.health>=5){player2.health=player2.health-5;}}, 1000);

@@ -8,18 +8,20 @@
   <title>The Wat Game</title>
 </head>
 <body>
-    
-<div class='health1'>
-  <progress style="height:24px;width:50%;margin-left:20%" id="health1" value="100" max="100">100%</progress>
 
+<div class='health1'>
+    <div class="pic1"></div>
+  <progress style="height:24px;width:50%;margin-left:30%;border:1px solid rgb(19, 18, 18);
+  " id="health1" value="100" max="100">100%</progress>
 </div>
 <div class='health2'>
-    <progress style="height:24px;width:50%;float:right;margin-right:20%" id="health2" value="100" max="100">100%</progress>
-  </div>
+    <div class="pic2"></div>
+    <progress style="height:24px;width:50%;float:right;margin-right:30%;border:1px solid rgb(19, 18, 18)" id="health2" value="100" max="100">100%</progress>
+</div>
 
-  <div class="center">
+<div class="center">
     <canvas id="canvas"></canvas>
-  </div>
+</div>
 
 
   <!-- <script type="text/javascript" src="js/background.js"></script> -->
@@ -27,7 +29,10 @@
   <script src="js/player2.js"></script>
   <script src="js/dmgOb.js"></script>
   <script src="js/healthOb.js"></script>
+  <script src="js/fastPill.js"></script>
   <script src="js/barriers.js"></script>
+  <script src="js/slowBarrier.js"></script>
+
   
 
   <script src="./main.js"></script>

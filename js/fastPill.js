@@ -1,29 +1,29 @@
-function healthOb() {
+function fastPill() {
     this.x = Math.floor(Math.random() * canvas.width);
     this.y = Math.floor(Math.random() * canvas.height);
-    this.width = 20;
-    this.height = 20;
+    this.width = 40;
+    this.height = 40;
   }
   
 
-  healthOb.prototype.draw = function draw() {
+  fastPill.prototype.draw = function draw() {
     var img = new Image();
     img.onload = function() { 
-       ctx.drawImage(img, healthOb.x, healthOb.y, healthOb.width, healthOb.height); 
+       ctx.drawImage(img, fastPill.x, fastPill.y, fastPill.width, fastPill.height); 
     }
-    img.src = "images/lifepill.png";
+    img.src = "images/bluepill.png";
   }
  
-  healthOb.prototype.collision = function(player) {
+  fastPill.prototype.collision = function(player) {
     if(
       player.x + player.width >= this.x && 
       this.x + this.width >= player.x && 
       player.y + player.height >= this.y && 
       this.y + this.height >= player.y
       ) {
-        player.health =player.health+10
+        player.speed =player.speed+0.5
         this.x = 1000
-        console.log('TE CURAS')
+        console.log('SPEEED')
     }
     else if(
       player2.x + player2.width >= this.x && 
@@ -31,9 +31,9 @@ function healthOb() {
       player2.y + player2.height >= this.y && 
       this.y + this.height >= player2.y
       ) {
-        player2.health =player2.health+10
+        player2.speed =player2.speed+0.5
         this.x = 1000
-        console.log('TE CURAS2')
+        console.log('SPEED')
     }
   }
 
