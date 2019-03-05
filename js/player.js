@@ -14,7 +14,6 @@ function Player() {
 }
 
 Player.prototype.movePlayer = function() {
-
   document.onkeydown = function(e) {
     switch(e.keyCode){
       case 39:
@@ -49,11 +48,11 @@ setInterval(function(){
   if (player.health>=5){player.health=player.health-5;}}, 1000);
 
 
-Player.prototype.draw = function() {
-  ctx.clearRect(0,0,canvas.width,canvas.height)
-  ctx.fillRect(this.x, this.y, this.width, this.height)
+// Player.prototype.draw = function() {
+//   ctx.clearRect(0,0,canvas.width,canvas.height)
+//   ctx.fillRect(this.x, this.y, this.width, this.height)
 
-  }
+//   }
 
 Player.prototype.updatePoints= function(){
   let health1 = document.getElementById("health1")
@@ -93,6 +92,5 @@ Player.prototype.updatePoints= function(){
 
 
 
-
-
+//====================================================================================
 

@@ -11,6 +11,7 @@ var dmgOb2 = new dmgOb();
 var dmgOb = new dmgOb();
 var barriers = new Barriers();
 var barriers2 = new Barriers2();
+var barriers3 = new Barriers3();
 var healthOb = new healthOb();
 var fastPill = new fastPill();
 var slowBarrier = new slowBarrier();
@@ -18,24 +19,32 @@ var slowBarrier = new slowBarrier();
 
 
 function game() {
+  
+  // player.draw();
+  player2.draw();
 
-  player.draw();
   player.movePlayer();
+  player2.movePlayer();
+
+
   player.updatePoints();
-  // player2.draw();
-  // player2.movePlayer();
   player2.updatePoints();
+  
+ 
   // audio.play();
   // gameOver();
 
   dmgOb.draw();
   dmgOb.collision(player);
-  dmgOb2.draw();
+  dmgOb2.draw();//solo me lo dibuja una vez
   dmgOb2.collision(player);
   barriers.draw();
   barriers.collision(player); 
   barriers2.draw();
   barriers2.collision(player);
+  // barriers3.draw();
+  // barriers3.collision(player);
+
   healthOb.draw();
   healthOb.collision(player);
   fastPill.draw();
@@ -43,6 +52,8 @@ function game() {
   slowBarrier.draw();
   slowBarrier.collision(player);
   
+
+
 // player.icono(); //para cargar la imagen
   // player.gameOver();
 
@@ -68,9 +79,14 @@ var interval = setInterval(game, 1000/60);
     
   // })
 
-//------------------------FUNCIONA GAME OVER para 2 jugadores
+//------------------------FUNCIONA GAME OVER para 2 jugadores arreglar el gameover, se muestra a posteriori
 //   function gameOver(){
-//     if (player.health <=0){
+//     if (player.health <=85){
+//       function displayGameOver(){
+//         document.getElementById("imggameover").style.display = "block";
+//         }
+//        displayGameOver();
+
 //       if(confirm("GAME OVER PLAYER1. Play again?")) {
 //         player.health =100
 //         player2.health =100

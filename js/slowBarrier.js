@@ -6,11 +6,13 @@ function slowBarrier() {
     this.color = 'orange'
   }
   
-  slowBarrier.prototype.draw = function () {
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-  
+  var slowimg = new Image();
+  slowimg.src = "images/arena.jpg";
+
+ slowBarrier.prototype.draw = function draw() {
+   ctx.drawImage(slowimg, this.x, this.y, this.width, this.height); 
+}
+
   
   slowBarrier.prototype.collision = function(player) {
       //colision izquierda
@@ -22,7 +24,8 @@ function slowBarrier() {
         player.speed = 0.1
         setTimeout(function(){player.speed=1},2000);//para que no este permanentemente a velocidad 0.1   
     }}
-     Audio.player
+
+
 // (this.x < player.x + player.width &&
 // this.x + this.width > player.x &&
 // this.y < player.y + player.height &&

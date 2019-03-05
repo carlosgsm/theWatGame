@@ -6,12 +6,13 @@ function dmgOb() {
   this.color = 'blue'
    }
 
-   dmgOb.prototype.draw = function draw() {
-    ctx.fillStyle = this.color;
-  ctx.fillRect(this.x, this.y, this.width, this.height);
+   var dmgimg = new Image();
+   dmgimg.src = "images/virus1.png";
+
+  dmgOb.prototype.draw = function draw() {
+    ctx.drawImage(dmgimg, this.x, this.y, this.width, this.height); 
 }
  
-
 dmgOb.prototype.collision = function(player) {
   if(
     player.x + player.width >= this.x && 

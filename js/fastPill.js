@@ -1,18 +1,18 @@
 function fastPill() {
-    this.x = Math.floor(Math.random() * canvas.width);
-    this.y = Math.floor(Math.random() * canvas.height);
+    // this.x = Math.floor(Math.random() * canvas.width);
+    // this.y = Math.floor(Math.random() * canvas.height);
+    this.x = canvas.width/2;
+    this.y = canvas.height/2-20;
     this.width = 40;
     this.height = 40;
   }
-  
+ 
+  var fastimg = new Image();
+  fastimg.src = "images/bluepill.png";
 
   fastPill.prototype.draw = function draw() {
-    var img = new Image();
-    img.onload = function() { 
-       ctx.drawImage(img, fastPill.x, fastPill.y, fastPill.width, fastPill.height); 
+       ctx.drawImage(fastimg, fastPill.x, fastPill.y, fastPill.width, fastPill.height); 
     }
-    img.src = "images/bluepill.png";
-  }
  
   fastPill.prototype.collision = function(player) {
     if(

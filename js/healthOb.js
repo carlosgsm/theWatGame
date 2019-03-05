@@ -3,15 +3,14 @@ function healthOb() {
     this.y = Math.floor(Math.random() * canvas.height);
     this.width = 20;
     this.height = 20;
+   
   }
-  
+  var healthimg = new Image();
+  healthimg.src = "images/lifepill.png";
+
 
   healthOb.prototype.draw = function draw() {
-    var img = new Image();
-    img.onload = function() { 
-       ctx.drawImage(img, healthOb.x, healthOb.y, healthOb.width, healthOb.height); 
-    }
-    img.src = "images/lifepill.png";
+       ctx.drawImage(healthimg, this.x, this.y, this.width, this.height); 
   }
  
   healthOb.prototype.collision = function(player) {
