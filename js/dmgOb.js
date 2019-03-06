@@ -1,9 +1,8 @@
 function dmgOb() {
   this.x = Math.floor(Math.random() * canvas.width);
   this.y = Math.floor(Math.random() * canvas.height);
-  this.width = 20;
-  this.height = 20;
-  this.color = 'blue'
+  this.width = 30;
+  this.height = 30;
    }
 
    var dmgimg = new Image();
@@ -20,7 +19,7 @@ dmgOb.prototype.collision = function(player) {
     player.y + player.height >= this.y && 
     this.y + this.height >= player.y
     ) {
-      player.health =player.health-10
+      player2.health =player2.health-10
       this.x = 1000
       console.log('TE QUEMAS')
   }
@@ -30,7 +29,7 @@ dmgOb.prototype.collision = function(player) {
     player2.y + player2.height >= this.y && 
     this.y + this.height >= player2.y
     ) {
-      player2.health =player2.health-10
+      player.health =player.health-10
       this.x = 1000
       console.log('TE QUEMAS2')
   }

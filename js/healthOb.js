@@ -1,8 +1,8 @@
 function healthOb() {
     this.x = Math.floor(Math.random() * canvas.width);
     this.y = Math.floor(Math.random() * canvas.height);
-    this.width = 20;
-    this.height = 20;
+    this.width = 30;
+    this.height = 30;
    
   }
   var healthimg = new Image();

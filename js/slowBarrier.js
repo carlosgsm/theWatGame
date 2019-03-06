@@ -13,7 +13,6 @@ function slowBarrier() {
    ctx.drawImage(slowimg, this.x, this.y, this.width, this.height); 
 }
 
-  
   slowBarrier.prototype.collision = function(player) {
       //colision izquierda
     if(this.x < player.x + player.width &&

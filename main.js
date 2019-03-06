@@ -1,14 +1,17 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 canvas.height = 500;
-canvas.width = 500;
+canvas.width = 800;
 
 //CONSTRUCTORES
 
 var player = new Player();
 var player2 = new Player2();
+var dmgOb4 = new dmgOb();
+var dmgOb3 = new dmgOb();
 var dmgOb2 = new dmgOb();
 var dmgOb = new dmgOb();
+
 var barriers = new Barriers();
 var barriers2 = new Barriers2();
 var barriers3 = new Barriers3();
@@ -19,10 +22,12 @@ var slowBarrier = new slowBarrier();
 
 
 function game() {
-  
+  // audio.play();
+  // gameOver();
   // player.draw();
-  player2.draw();
 
+  player2.draw();
+  
   player.movePlayer();
   player2.movePlayer();
 
@@ -30,32 +35,33 @@ function game() {
   player.updatePoints();
   player2.updatePoints();
   
- 
-  // audio.play();
-  // gameOver();
 
-  dmgOb.draw();
-  dmgOb.collision(player);
-  dmgOb2.draw();//solo me lo dibuja una vez
-  dmgOb2.collision(player);
+  
   barriers.draw();
   barriers.collision(player); 
   barriers2.draw();
   barriers2.collision(player);
-  // barriers3.draw();
-  // barriers3.collision(player);
+  slowBarrier.draw();// aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
+  slowBarrier.collision(player);
+
+
+  dmgOb.draw();
+  dmgOb.collision(player);
+  dmgOb2.draw();
+  dmgOb2.collision(player);
+  dmgOb3.draw();
+  dmgOb3.collision(player);
+  dmgOb4.draw();
+  dmgOb4.collision(player);
+
 
   healthOb.draw();
   healthOb.collision(player);
   fastPill.draw();
   fastPill.collision(player);
-  slowBarrier.draw();
-  slowBarrier.collision(player);
   
-
-
-// player.icono(); //para cargar la imagen
-  // player.gameOver();
+  
+    // player.gameOver();
 
   ctx.fillText("p1_x: " + player.x, 10,20);
   ctx.fillText("p1_y: " + player.y, 10,35);

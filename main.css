@@ -33,7 +33,7 @@ body {
   float: right;
   margin-top: 5px;
 }
-/* .pic1{
+.pic1{
   height:100px;
   width:100px;
   content: url('http://static2.fjcdn.com/thumbnails/comments/Yeah+well+no+one+is+forcing+you+to+be+a+_2920236a3bc973de27a119933a63920f.png');
@@ -48,7 +48,7 @@ body {
   float:right;
   margin-right: 35%;
 
-} */
+}
 
 
 .gameover {
