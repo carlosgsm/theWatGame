@@ -1,6 +1,8 @@
 function slowBarrier() {
-    this.x = Math.floor(Math.random() * canvas.width);
-    this.y = Math.floor(Math.random() * canvas.height);
+    // this.x = Math.floor(Math.random() * (canvas.width-40));
+    // this.y = Math.floor(Math.random() * (canvas.height-100));
+    this.x = canvas.width/2;
+    this.y = canvas.height/2-20;
     this.width = 40;
     this.height = 100;
     this.color = 'orange'

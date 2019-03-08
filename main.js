@@ -14,36 +14,80 @@ var dmgOb = new dmgOb();
 
 var barriers = new Barriers();
 var barriers2 = new Barriers2();
-var barriers3 = new Barriers3();
+var barriers4 = new Barriers4();
+var barriers5 = new Barriers5();
+var barriers6 = new Barriers6();
+var barriers7 = new Barriers7();
+var barriers8 = new Barriers8();
+var barriers9 = new Barriers9();
+var barriers10 = new Barriers10();
+var barriers11 = new Barriers11();
+var barriers12 = new Barriers12();
+
+
+// var barriers3 = new Barriers2();
+// var barriers4 = [new Barriers2(),new Barriers2()]
+// var barriersP2 = [new BarriersP2(),new BarriersP2(),new BarriersP2(),new BarriersP2()]
 var healthOb = new healthOb();
 var fastPill = new fastPill();
 var slowBarrier = new slowBarrier();
-
 
 
 function game() {
   // audio.play();
   // gameOver();
   // player.draw();
+  // player2.zombie();
+
 
   player2.draw();
-  
   player.movePlayer();
   player2.movePlayer();
 
-
   player.updatePoints();
   player2.updatePoints();
-  
-
-  
+    
   barriers.draw();
   barriers.collision(player); 
   barriers2.draw();
   barriers2.collision(player);
-  slowBarrier.draw();// aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
-  slowBarrier.collision(player);
+  barriers4.draw();
+  barriers4.collision(player);
+  barriers5.draw();
+  barriers5.collision(player);
+  barriers6.draw();
+  barriers6.collision(player);
+  barriers7.draw();
+  barriers7.collision(player);
+  barriers8.draw();
+  barriers8.collision(player);
+  barriers9.draw();
+  barriers9.collision(player);
+  barriers10.draw();
+  barriers10.collision(player);
+  barriers11.draw();
+  barriers11.collision(player);
+  barriers12.draw();
+  barriers12.collision(player);
+  // barriers3.draw();
+  // barriers3.collision(player);
+  // slowBarrier.draw();
+  // barriers4[1].draw();
+  // barriers4[1].collision(player);
+  // barriers4[0].draw();
+  // barriers4[0].collision(player);
+  // barriersP2[1].draw();
+  // barriersP2[1].collision(player);
+  // barriersP2[0].draw();
+  // barriersP2[0].collision(player);
+  // barriersP2[2].draw();
+  // barriersP2[2].collision(player);
+  // barriersP2[3].draw();
+  // barriersP2[3].collision(player);
 
+
+  // aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
+  // slowBarrier.collision(player);
 
   dmgOb.draw();
   dmgOb.collision(player);
