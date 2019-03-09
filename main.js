@@ -7,10 +7,9 @@ canvas.width = 800;
 
 var player = new Player();
 var player2 = new Player2();
-var dmgOb4 = new dmgOb();
-var dmgOb3 = new dmgOb();
-var dmgOb2 = new dmgOb();
-var dmgOb = new dmgOb();
+
+var dmgOb = [new dmgOb(),new dmgOb(),new dmgOb(),new dmgOb(),new dmgOb(),new dmgOb(),new dmgOb(),new dmgOb()]
+var healthOb = [new healthOb(),new healthOb(),new healthOb(),new healthOb(),new healthOb(),]// var dmgOb2 = new dmgOb();
 
 var barriers = new Barriers();
 var barriers2 = new Barriers2();
@@ -28,7 +27,7 @@ var barriers12 = new Barriers12();
 // var barriers3 = new Barriers2();
 // var barriers4 = [new Barriers2(),new Barriers2()]
 // var barriersP2 = [new BarriersP2(),new BarriersP2(),new BarriersP2(),new BarriersP2()]
-var healthOb = new healthOb();
+
 var fastPill = new fastPill();
 var slowBarrier = new slowBarrier();
 
@@ -40,13 +39,15 @@ function game() {
   // player2.zombie();
 
 
+  player.draw();
   player2.draw();
+
   player.movePlayer();
   player2.movePlayer();
 
   player.updatePoints();
   player2.updatePoints();
-    
+  //---------------------------------BARRERAS 
   barriers.draw();
   barriers.collision(player); 
   barriers2.draw();
@@ -69,40 +70,43 @@ function game() {
   barriers11.collision(player);
   barriers12.draw();
   barriers12.collision(player);
-  // barriers3.draw();
-  // barriers3.collision(player);
-  // slowBarrier.draw();
-  // barriers4[1].draw();
-  // barriers4[1].collision(player);
-  // barriers4[0].draw();
-  // barriers4[0].collision(player);
-  // barriersP2[1].draw();
-  // barriersP2[1].collision(player);
-  // barriersP2[0].draw();
-  // barriersP2[0].collision(player);
-  // barriersP2[2].draw();
-  // barriersP2[2].collision(player);
-  // barriersP2[3].draw();
-  // barriersP2[3].collision(player);
-
+  //---------------------------------OBJETOS DE DAMAGE
+  dmgOb[0].draw();
+  dmgOb[0].collision(player); 
+  dmgOb[1].draw();
+  dmgOb[1].collision(player);
+  dmgOb[2].draw();
+  dmgOb[2].collision(player);
+  dmgOb[3].draw();
+  dmgOb[3].collision(player);
+  dmgOb[4].draw();
+  dmgOb[4].collision(player);
+  dmgOb[5].draw();
+  dmgOb[5].collision(player);
+  dmgOb[6].draw();
+  dmgOb[6].collision(player);
+  dmgOb[7].draw();
+  dmgOb[7].collision(player);
+  //---------------------------------OBJETOS DE HEAL
+  healthOb[0].draw();
+  healthOb[0].collision(player); 
+  healthOb[1].draw();
+  healthOb[1].collision(player);
+  healthOb[2].draw();
+  healthOb[2].collision(player);
+  healthOb[3].draw();
+  healthOb[3].collision(player);
+  healthOb[4].draw();
+  healthOb[4].collision(player);
+  //---------------------------------OBJETOS VARIOS
+  fastPill.draw();
+  fastPill.collision(player);
 
   // aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
   // slowBarrier.collision(player);
 
-  dmgOb.draw();
-  dmgOb.collision(player);
-  dmgOb2.draw();
-  dmgOb2.collision(player);
-  dmgOb3.draw();
-  dmgOb3.collision(player);
-  dmgOb4.draw();
-  dmgOb4.collision(player);
-
-
-  healthOb.draw();
-  healthOb.collision(player);
-  fastPill.draw();
-  fastPill.collision(player);
+ 
+ 
   
   
     // player.gameOver();
@@ -135,13 +139,18 @@ var interval = setInterval(game, 1000/60);
 //       function displayGameOver(){
 //         document.getElementById("imggameover").style.display = "block";
 //         }
-//        displayGameOver();
+//         displayGameOver();
 
-//       if(confirm("GAME OVER PLAYER1. Play again?")) {
-//         player.health =100
-//         player2.health =100
+//       setTimeout(function() {if(confirm("La palmaste PLAYER1.No vales para una mierda, marcha al fornite || Play again?")) {
+//           window.location.href = "http://elpais.com";
+//           player.health =100
+//           player2.health =100
+//         }  
+//         else {alert("Mala ruina tengas!");
+//       }
+//         },1000);
 //     }
-//     }
+    
 //     else if (player2.health <=0){
 //       if(confirm("GAME OVER PLAYER2. Play again?")) {
 //         player.health =100
@@ -149,3 +158,24 @@ var interval = setInterval(game, 1000/60);
 //     }
 //   }
 // }
+
+
+
+
+ // barriers3.draw();
+  // barriers3.collision(player);
+  // slowBarrier.draw();
+  // barriers4[1].draw();
+  // barriers4[1].collision(player);
+  // barriers4[0].draw();
+  // barriers4[0].collision(player);
+  // barriersP2[1].draw();
+  // barriersP2[1].collision(player);
+  // barriersP2[0].draw();
+  // barriersP2[0].collision(player);
+  // barriersP2[2].draw();
+  // barriersP2[2].collision(player);
+  // barriersP2[3].draw();
+  // barriersP2[3].collision(player);
+  // dmgOb2.draw();
+  // dmgOb2.collision(player);

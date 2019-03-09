@@ -1,24 +1,24 @@
 
 
 function Player2() {
-  this.x = canvas.width-100;
-  this.y = canvas.height-100;
+  this.x = canvas.width-60;
+  this.y = canvas.height-90;
   this.isMovingRight = false;
   this.isMovingLeft = false;
   this.isMovingUp = false;
   this.isMovingDown = false;
   this.health = 100;// como le meto limite a la vida? tener 100 como maximo
-  this.width = 60;
-  this.height = 60;
+  this.width = 30;
+  this.height = 55;
   this.speed = 1;
   //sprite
-  this.sx = 100
+  this.sx = 110
   this.sy = 130
   this.img = player2img
-  this.sWidth = 60
-  this.sHeight = 60
-  this.dWidth = 70
-  this.dHeight = 70
+  this.sWidth = 30
+  this.sHeight = 55
+  this.dWidth = 40
+  this.dHeight = 40
 
 }
 
@@ -28,19 +28,23 @@ Player2.prototype.movePlayer = function() {
     switch(e.keyCode){
       case 68:
         this.isMovingRight = true;
-        this.sx = 90
+        this.sx = 110
         this.sy = 70
         break
       case 65:
         this.isMovingLeft = true;
-        this.sx = 90
+        this.sx = 110
         this.sy = 200
         break
       case 87:
         this.isMovingUp = true;
+        this.sx = 110
+        this.sy = 10
         break
       case 83: 
         this.isMovingDown = true;
+        this.sx = 110
+        this.sy = 130
         break
       }
   }.bind(this))
@@ -59,10 +63,10 @@ Player2.prototype.movePlayer = function() {
 }
 
 Player2.prototype.draw = function() {
-  ctx.clearRect(0,0,canvas.width,canvas.height)
-  ctx.fillRect(player.x, player.y, player.width, player.height)
+  // ctx.clearRect(0,0,canvas.width,canvas.height)
+  //  ctx.drawImage(player1img.img, player.sx, player.sy, player.sWidth, player.sHeight, player.x, player.y, player.sWidth, player.sHeight);
+
   ctx.drawImage(this.img, this.sx, this.sy, this.sWidth, this.sHeight, this.x, this.y, this.sWidth, this.sHeight);
-  console.log('draw2')
   }
 
   

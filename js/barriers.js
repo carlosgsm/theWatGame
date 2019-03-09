@@ -239,18 +239,6 @@ function Barriers12(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //======== barrera central
 
 // Barriers3.prototype.collision = function(player) {
@@ -288,22 +276,7 @@ function Barriers12(){
 //                this.color = 'yellow'  
 //       }
 
-//     }
-
-
-
-
-
-
-
-
-
-//        //colision abajo 
-//        else if( player.y <= this.height && this.x-this.width <= player.x && this.x+this.width >= player.x) {
-//         player.y +=5
-//         this.color = 'purple'        
-//     }
-// }
+// 
 
 
 // (this.x < player.x + player.width &&

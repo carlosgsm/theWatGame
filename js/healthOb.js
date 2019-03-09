@@ -21,7 +21,8 @@ function healthOb() {
       this.y + this.height >= player.y
       ) {
         player.health =player.health+10
-        this.x = 1000
+        this.x=Math.ceil(Math.random() * canvas.width/5)*5;
+        this.y=Math.ceil(Math.random() * canvas.height/5)*5;
         console.log('TE CURAS')
     }
     else if(
@@ -31,7 +32,8 @@ function healthOb() {
       this.y + this.height >= player2.y
       ) {
         player2.health =player2.health+10
-        this.x = 1000
+        this.x=Math.ceil(Math.random() * canvas.width/5)*5;
+        this.y=Math.ceil(Math.random() * canvas.height/5)*5;
         console.log('TE CURAS2')
     }
   }

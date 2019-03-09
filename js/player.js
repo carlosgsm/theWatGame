@@ -1,15 +1,23 @@
 function Player() {
-  this.x = 50;
-  this.y = 50;
+  this.x = 30;
+  this.y = 30;
   this.isMovingRight = false;
   this.isMovingLeft = false;
   this.isMovingUp = false;
   this.isMovingDown = false;
   this.health = 100;// como le meto limite a la vida? tener 100 como maximo
-  this.width = 50;
+  this.width = 30;
   this.height = 50;
   this.color = 'red'
   this.speed = 1;
+  //sprite
+  this.sx = 0
+  this.sy = 0
+  this.img = player1img
+  this.sWidth = 30
+  this.sHeight = 50
+  this.dWidth = 40
+  this.dHeight = 40
  
 }
 
@@ -18,15 +26,23 @@ Player.prototype.movePlayer = function() {
     switch(e.keyCode){
       case 39:
         this.isMovingRight = true;
+        this.sx = 0
+        this.sy = 96
         break
       case 37:
         this.isMovingLeft = true;
+        this.sx = 0
+        this.sy = 48
         break
       case 38:
         this.isMovingUp = true;
+        this.sx = 0
+        this.sy = 145
         break
       case 40:
         this.isMovingDown = true;
+        this.sx = 0
+        this.sy = 0
         break
       }
   }.bind(this))
@@ -47,6 +63,11 @@ Player.prototype.movePlayer = function() {
 setInterval(function(){
   if (player.health>=5){player.health=player.health-5;}}, 1000);
 
+  Player.prototype.draw = function() {
+    ctx.clearRect(0,0,canvas.width,canvas.height)  
+    ctx.drawImage(this.img, this.sx, this.sy, this.sWidth, this.sHeight, this.x, this.y, this.sWidth, this.sHeight);
+    }
+   
 
 // Player.prototype.draw = function() {
 //   ctx.clearRect(0,0,canvas.width,canvas.height)
@@ -59,7 +80,8 @@ Player.prototype.updatePoints= function(){
   health1.value = this.health;
 }
 
-
+var player1img = new Image();
+player1img.src = "images/oldmen2.png";
 
 //====================================================================================
 

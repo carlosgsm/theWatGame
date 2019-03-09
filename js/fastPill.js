@@ -3,8 +3,8 @@ function fastPill() {
     // this.y = Math.floor(Math.random() * canvas.height);
     this.x = canvas.width/2;
     this.y = canvas.height/2-20;
-    this.width = 40;
-    this.height = 40;
+    this.width = 30;
+    this.height = 30;
   }
  
   var fastimg = new Image();
@@ -21,8 +21,10 @@ function fastPill() {
       player.y + player.height >= this.y && 
       this.y + this.height >= player.y
       ) {
-        player.speed =player.speed+0.5
         this.x = 1000
+        player.speed=player.speed+1
+        setTimeout(function(){player.speed=1},1000);//para que no este permanentemente a velocidad 0.1   
+
         console.log('SPEEED')
     }
     else if(
@@ -31,9 +33,10 @@ function fastPill() {
       player2.y + player2.height >= this.y && 
       this.y + this.height >= player2.y
       ) {
-        player2.speed =player2.speed+0.5
         this.x = 1000
-        console.log('SPEED')
+        player2.speed =player2.speed+1
+        setTimeout(function(){player2.speed=1},1000);
+        console.log('SPEED2')
     }
   }
 
