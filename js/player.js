@@ -85,3 +85,13 @@ player1img.src = "images/oldmen2.png";
 
 //====================================================================================
 
+Player.prototype.hitObstacle = function(obs) {
+  if (Math.abs(obs.x - this.x) < this.radius + obs.radius - 5) {
+    if (Math.abs(obs.y - this.y) < this.radius + obs.radius - 5) {
+      this.image.src = "images/crash.png";
+      this.ctx.drawImage(this.image, (this.x-35), (this.y-40), this.width, this.height);
+      this.life = this.life - 1;
+      return true;
+    }
+  }
+};

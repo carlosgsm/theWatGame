@@ -11,8 +11,10 @@ canvas {
 
 }
 
-body {
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/61MqJc3crjL._SX466_.jpg');
+.bodygame {
+  /* background-image: url('https://images-na.ssl-images-amazon.com/images/I/61MqJc3crjL._SX466_.jpg'); */
+    background-image: url('images/cement.jpg');
+
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -99,3 +101,72 @@ body {
     text-align: center;
 
   }
+
+
+  /* START */
+
+.introhead {
+  width: 100%;
+  height: 20%;
+  content: url('images/watrotulo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+ 
+}
+.introimg{
+background-color: green;
+content: url('images/watrotulo.png');
+background-repeat: no-repeat;
+
+}
+/* div#start{
+  width:200px;
+  height:200px;
+} */
+div#start a{
+   color: rgb(26, 18, 18);
+  /*border: 2px solid #fff; */
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 500px;
+  padding: 10px 30px 30px 30px;
+  letter-spacing: 1px;
+  background-image: url('images/button.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+.bodyintro {
+  background-image: url('images/hallow.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.granma {
+  
+  width: 300px;
+  height: 300px;
+  content: url('images/granma23.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 15%;
+  /* position: absolute; */
+  position: relative;
+  top: 400;
+}
+
+
+.instructions {
+  width: 22%;
+  height: 400px;
+  background-color: green;
+  float: left;
+   /* padding-left: 38%; */
+  position: relative;
+
+}

@@ -4,6 +4,7 @@ canvas.height = 500;
 canvas.width = 800;
 
 //CONSTRUCTORES
+var slowBarrier = new slowBarrier();
 
 var player = new Player();
 var player2 = new Player2();
@@ -23,13 +24,14 @@ var barriers10 = new Barriers10();
 var barriers11 = new Barriers11();
 var barriers12 = new Barriers12();
 
+var fastPill = new fastPill();
+var healthBottle = new healthBottle();
+var portal = new Portal();
+var portal2 = new Portal2();
 
 // var barriers3 = new Barriers2();
 // var barriers4 = [new Barriers2(),new Barriers2()]
 // var barriersP2 = [new BarriersP2(),new BarriersP2(),new BarriersP2(),new BarriersP2()]
-
-var fastPill = new fastPill();
-var slowBarrier = new slowBarrier();
 
 
 function game() {
@@ -37,8 +39,7 @@ function game() {
   // gameOver();
   // player.draw();
   // player2.zombie();
-
-
+  
   player.draw();
   player2.draw();
 
@@ -47,6 +48,7 @@ function game() {
 
   player.updatePoints();
   player2.updatePoints();
+
   //---------------------------------BARRERAS 
   barriers.draw();
   barriers.collision(player); 
@@ -98,16 +100,18 @@ function game() {
   healthOb[3].collision(player);
   healthOb[4].draw();
   healthOb[4].collision(player);
+  healthBottle.draw();
+  healthBottle.collision(player);
   //---------------------------------OBJETOS VARIOS
   fastPill.draw();
   fastPill.collision(player);
-
-  // aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
-  // slowBarrier.collision(player);
-
- 
- 
+  portal.draw();
+  portal.collision(player);
+  portal2.draw();
+  portal2.collision(player);
   
+  // slowBarrier.draw();  // aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
+  // slowBarrier.collision(player);
   
     // player.gameOver();
 
@@ -142,11 +146,12 @@ var interval = setInterval(game, 1000/60);
 //         displayGameOver();
 
 //       setTimeout(function() {if(confirm("La palmaste PLAYER1.No vales para una mierda, marcha al fornite || Play again?")) {
-//           window.location.href = "http://elpais.com";
+//           window.location.href = "game.html";
 //           player.health =100
 //           player2.health =100
 //         }  
 //         else {alert("Mala ruina tengas!");
+//         window.location.href = "index.html";
 //       }
 //         },1000);
 //     }

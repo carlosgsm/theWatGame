@@ -72,7 +72,7 @@ var metalimg = new Image();
 
 Barriers2.prototype.collision = function(player) {
 
-    //colision izda
+    //colision dcha
     if(this.x == player.x + player.width &&
       this.y <= player.y + player.height &&
       this.height + this.y >= player.y) {
