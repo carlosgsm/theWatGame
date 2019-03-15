@@ -24,22 +24,22 @@ function Player() {
 Player.prototype.movePlayer = function() {
   document.addEventListener('keydown', function(e) {
     switch(e.keyCode){
-      case 39:
+      case 68:
         this.isMovingRight = true;
         this.sx = 0
         this.sy = 96
         break
-      case 37:
+      case 65:
         this.isMovingLeft = true;
         this.sx = 0
         this.sy = 48
         break
-      case 38:
+      case 87:
         this.isMovingUp = true;
         this.sx = 0
         this.sy = 145
         break
-      case 40:
+      case 83:
         this.isMovingDown = true;
         this.sx = 0
         this.sy = 0
@@ -61,19 +61,13 @@ Player.prototype.movePlayer = function() {
 }
 
 setInterval(function(){
-  if (player.health>=5){player.health=player.health-5;}}, 1000);
+  if (player.health>=5){player.health=player.health-3;}}, 1000);
 
   Player.prototype.draw = function() {
     ctx.clearRect(0,0,canvas.width,canvas.height)  
     ctx.drawImage(this.img, this.sx, this.sy, this.sWidth, this.sHeight, this.x, this.y, this.sWidth, this.sHeight);
     }
    
-
-// Player.prototype.draw = function() {
-//   ctx.clearRect(0,0,canvas.width,canvas.height)
-//   ctx.fillRect(this.x, this.y, this.width, this.height)
-
-//   }
 
 Player.prototype.updatePoints= function(){
   let health1 = document.getElementById("health1")
@@ -85,13 +79,13 @@ player1img.src = "images/oldmen2.png";
 
 //====================================================================================
 
-Player.prototype.hitObstacle = function(obs) {
-  if (Math.abs(obs.x - this.x) < this.radius + obs.radius - 5) {
-    if (Math.abs(obs.y - this.y) < this.radius + obs.radius - 5) {
-      this.image.src = "images/crash.png";
-      this.ctx.drawImage(this.image, (this.x-35), (this.y-40), this.width, this.height);
-      this.life = this.life - 1;
-      return true;
-    }
-  }
-};
+// Player.prototype.hitObstacle = function(obs) {
+//   if (Math.abs(obs.x - this.x) < this.radius + obs.radius - 5) {
+//     if (Math.abs(obs.y - this.y) < this.radius + obs.radius - 5) {
+//       this.image.src = "images/crash.png";
+//       this.ctx.drawImage(this.image, (this.x-35), (this.y-40), this.width, this.height);
+//       this.life = this.life - 1;
+//       return true;
+//     }
+//   }
+// };

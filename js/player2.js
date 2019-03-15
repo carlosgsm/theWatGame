@@ -26,22 +26,22 @@ Player2.prototype.movePlayer = function() {
 
   document.addEventListener('keydown', function(e) {
     switch(e.keyCode){
-      case 68:
+      case 39:
         this.isMovingRight = true;
         this.sx = 110
         this.sy = 70
         break
-      case 65:
+      case 37:
         this.isMovingLeft = true;
         this.sx = 110
         this.sy = 200
         break
-      case 87:
+      case 38:
         this.isMovingUp = true;
         this.sx = 110
         this.sy = 10
         break
-      case 83: 
+      case 40: 
         this.isMovingDown = true;
         this.sx = 110
         this.sy = 130
@@ -76,7 +76,7 @@ Player2.prototype.updatePoints= function(){
   }
 
   setInterval(function(){
-    if (player2.health>=5){player2.health=player2.health-5;
+    if (player2.health>=5){player2.health=player2.health-3;
     }}, 1000);
    
 
