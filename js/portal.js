@@ -1,6 +1,6 @@
 function Portal() {
   this.x = 15;
-  this.y = 400;
+  this.y = 450;
   this.width = 35;
   this.height = 70;
 }
@@ -97,7 +97,7 @@ Portal2.prototype.collision = function(player) {
   this.y <= player.y + player.height &&
   this.height + this.y >= player.y) {
     player.x = 55;
-    player.y = 400;  
+    player.y = 450;  
 }
 //colision dcha
 else if (this.x == player.x   &&
@@ -128,7 +128,7 @@ else if(this.x +20== player2.x + player2.width &&
 this.y < player2.y + player2.height &&
 this.height + this.y > player2.y) {
   player2.x = 55;
-  player2.y = 400;  
+  player2.y = 450;  
 }
 //colision izda
 else if (this.x == player2.x -this.width  &&

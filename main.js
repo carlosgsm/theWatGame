@@ -1,10 +1,9 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-canvas.height = 500;
+canvas.height = 550;
 canvas.width = 800;
 
 //CONSTRUCTORES
-var slowBarrier = new slowBarrier();
 
 var player = new Player();
 var player2 = new Player2();
@@ -28,6 +27,9 @@ var fastPill = new fastPill();
 var healthBottle = new healthBottle();
 var portal = new Portal();
 var portal2 = new Portal2();
+var slowButton = new slowButton();
+var slowButton2 = new slowButton2();
+
 
 // var barriers3 = new Barriers2();
 // var barriers4 = [new Barriers2(),new Barriers2()]
@@ -35,10 +37,9 @@ var portal2 = new Portal2();
 
 
 function game() {
-  // audio.play();
-  // gameOver();
-  // player.draw();
-  // player2.zombie();
+  audio.play();
+  gameOver();
+  
   
   player.draw();
   player2.draw();
@@ -109,78 +110,70 @@ function game() {
   portal.collision(player);
   portal2.draw();
   portal2.collision(player);
+  slowButton.draw();
+  slowButton.collision(player);
+  slowButton2.draw();
+  slowButton2.collision(player);
+  stoper();
+ 
   
-  // slowBarrier.draw();  // aparece por delante en lugar de por detras, probando el orden de llamada, no cambia...
-  // slowBarrier.collision(player);
-  
-    // player.gameOver();
 
-  ctx.fillText("p1_x: " + player.x, 10,20);
-  ctx.fillText("p1_y: " + player.y, 10,35);
-  ctx.fillText("Health: " + player.health, 10,50);
-  ctx.fillText("p2_x: " + player2.x, 400,20);
-  ctx.fillText("p2_y: " + player2.y, 400,35);
-  ctx.fillText("Health: " + player2.health, 400,50);
+  // ctx.fillText("p1_x: " + player.x, 10,20);
+  // ctx.fillText("p1_y: " + player.y, 10,35);
+  // ctx.fillText("Health: " + player.health, 10,50);
+  // ctx.fillText("p2_x: " + player2.x, 400,20);
+  // ctx.fillText("p2_y: " + player2.y, 400,35);
+  // ctx.fillText("Health: " + player2.health, 400,50);
 }
 
 var interval = setInterval(game, 1000/60);
 
-// var audio = new Audio('audios/421_Disco_Bach_Loop.mp3');
-// audio.play();
+var audio = new Audio('audios/421_Disco_Bach_Loop.mp3');
+audio.play();
 
-//PRUEBA CONSTRUCTOR VARIOS
 
-// counter += 1;
-  // if(counter % 10 === 0)obstaclesArray.push(new dmgOb());
-  // obstaclesArray.forEach(function(dmgOb) {
-  //   dmgOb.draw();
-    
-  // })
 
 //------------------------FUNCIONA GAME OVER para 2 jugadores arreglar el gameover, se muestra a posteriori
-//   function gameOver(){
-//     if (player.health <=85){
-//       function displayGameOver(){
-//         document.getElementById("imggameover").style.display = "block";
-//         }
-//         displayGameOver();
+  function gameOver(){
+    if (player.health <=3){
+      function displayGameOver(){
+        document.getElementById("imggameover").style.display = "block";
+        audio.pause();
+        audioGameover.play();
 
-//       setTimeout(function() {if(confirm("La palmaste PLAYER1.No vales para una mierda, marcha al fornite || Play again?")) {
-//           window.location.href = "game.html";
-//           player.health =100
-//           player2.health =100
-//         }  
-//         else {alert("Mala ruina tengas!");
-//         window.location.href = "index.html";
-//       }
-//         },1000);
-//     }
+        }
+        displayGameOver();
+
+      setTimeout(function() {if(confirm("La palmaste PLAYER1 No vales para una mierda, marcha al fornite || Play again?")) {
+          window.location.href = "game.html";
+          
+        }  
+        else {alert("Mala ruina tengas!");
+        window.location.href = "index.html";
+      }
+        },1000);
+    }
     
-//     else if (player2.health <=0){
-//       if(confirm("GAME OVER PLAYER2. Play again?")) {
-//         player.health =100
-//         player2.health =100
-//     }
-//   }
-// }
+    else if (player2.health <=3){
+      function displayGameOver(){
+        document.getElementById("imggameover").style.display = "block";
+        audio.pause();
+        audioGameover.play();
+        }
+        displayGameOver();
+
+      setTimeout(function() {if(confirm("La palmaste PLAYER2 No vales para una mierda, marcha al fornite || Play again?")) {
+          window.location.href = "game.html";
+          
+        }  
+        else {alert("Mala ruina tengas!");
+        window.location.href = "index.html";
+      }
+        },500);
+    }
+  }
 
 
+  var audioGameover = new Audio('audios/game_over.wav');
 
-
- // barriers3.draw();
-  // barriers3.collision(player);
-  // slowBarrier.draw();
-  // barriers4[1].draw();
-  // barriers4[1].collision(player);
-  // barriers4[0].draw();
-  // barriers4[0].collision(player);
-  // barriersP2[1].draw();
-  // barriersP2[1].collision(player);
-  // barriersP2[0].draw();
-  // barriersP2[0].collision(player);
-  // barriersP2[2].draw();
-  // barriersP2[2].collision(player);
-  // barriersP2[3].draw();
-  // barriersP2[3].collision(player);
-  // dmgOb2.draw();
-  // dmgOb2.collision(player);
+  

@@ -1,14 +1,14 @@
 function Barriers() {
-  this.x = 150;
+  this.x = 125;
   this.y = 0;
   this.width = 20;
   this.height = 100;
-  this.color = 'black'
 }
  //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-Barriers.prototype.draw = function () {
-  ctx.fillStyle = this.color;
-  ctx.fillRect(this.x, this.y, this.width, this.height);
+
+
+Barriers.prototype.draw = function draw() {
+  ctx.drawImage(metalimg, this.x, this.y, this.width, this.height); 
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -57,10 +57,6 @@ function Barriers2() {
   this.color = 'black'
 }
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Barriers2.prototype.draw = function () {
-  ctx.fillStyle = this.color;
-  ctx.fillRect(this.x, this.y, this.width, this.height);
-}
 
 var metalimg = new Image();
   metalimg.src = "images/metal-texture.png";
@@ -156,6 +152,7 @@ Barriers5.prototype.constructor = Barriers5;
 function Barriers5(){
   Barriers4.call(this);
   this.x=this.x+90
+  
 }
 
 Barriers6.prototype = Object.create(Barriers5.prototype);
@@ -163,6 +160,7 @@ Barriers6.prototype.constructor = Barriers6;
 function Barriers6(){
   Barriers5.call(this);
   this.x=this.x+90
+  this.height = 150
 }
 
 Barriers7.prototype = Object.create(Barriers6.prototype);
@@ -170,6 +168,7 @@ Barriers7.prototype.constructor = Barriers7;
 function Barriers7(){
   Barriers6.call(this);
   this.x=this.x+90
+  this.height = 90
 }
 
 Barriers8.prototype = Object.create(Barriers7.prototype);
@@ -214,7 +213,7 @@ function Barriers12(){
   Barriers11.call(this);
   this.y=this.y+90
   this.width=150
-  this.x = Math.ceil(Math.random() * 500/5)*5;//para no encajonar a player 2 un x menor
+  this.x = Math.ceil(Math.random() * 500/5)*5+70;//para no encajonar a player 2 un x menor
 }
 ///////
 

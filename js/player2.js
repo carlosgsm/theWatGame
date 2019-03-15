@@ -26,22 +26,22 @@ Player2.prototype.movePlayer = function() {
 
   document.addEventListener('keydown', function(e) {
     switch(e.keyCode){
-      case 39:
+      case 76:
         this.isMovingRight = true;
         this.sx = 110
         this.sy = 70
         break
-      case 37:
+      case 74:
         this.isMovingLeft = true;
         this.sx = 110
         this.sy = 200
         break
-      case 38:
+      case 73:
         this.isMovingUp = true;
         this.sx = 110
         this.sy = 10
         break
-      case 40: 
+      case 75: 
         this.isMovingDown = true;
         this.sx = 110
         this.sy = 130

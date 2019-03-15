@@ -1,13 +1,15 @@
 canvas {
   border: 1px solid red;
-  background-image: url('images/lava.png')
-}
+  background-image: url('images/lava.png');
+  background-size: cover;
+  background-repeat: no-repeat;}
 
 .center {
   display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-top: 200px;
 
 }
 
@@ -36,16 +38,16 @@ canvas {
   margin-top: 5px;
 }
 .pic1{
-  height:100px;
-  width:100px;
+  height:150px;
+  width:150px;
   content: url('http://static2.fjcdn.com/thumbnails/comments/Yeah+well+no+one+is+forcing+you+to+be+a+_2920236a3bc973de27a119933a63920f.png');
   margin-left: 35%;
   float:left;
 
 }
 .pic2{
-  height:100px;
-  width:100px;
+  height:150px;
+  width:150px;
   content: url('http://plazmaburst2.com/forum/download/file.php?avatar=32547_1454800966.png');
   float:right;
   margin-right: 35%;
@@ -113,7 +115,7 @@ canvas {
   background-size: contain;
 }
  
-}
+
 .introimg{
 background-color: green;
 content: url('images/watrotulo.png');
@@ -131,9 +133,7 @@ div#start a{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 45%;
   /* padding: 10px 30px 30px 30px; */
-  letter-spacing: 1px;
   background-image: url('images/button-play.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -152,13 +152,15 @@ div#start a{
 
 .granma {
   
-  width: 300px;
-  height: 350px;
-  content: url('images/granma23.png');
+  width: 30%;
+  height: 500px;
+  background-image: url('images/granma23.png');
   background-repeat: no-repeat;
   background-size: contain;
-  padding-left: 35%;
-  position: absolute;
+  margin-left: 40%;
+  border-bottom: 50px;
+  /* position: absolute; */
+  float:right;
 
   /* position: relative; */
 
@@ -166,27 +168,15 @@ div#start a{
 
 
 .instructions {
-  width: 22%;
-  height: 400px;
+  width: 30%;
+  height: 600px;
   /* background-color: green; */
   float: left;
-  position: relative;
-  background-image: url('images/mariobackg.png');
+  position: absolute;
+  background-image: url('images/Instruc2.PNG');
   background-repeat: no-repeat;
   background-size: contain;
-
-}
-
-h2{
-  font-size:22px;
-  padding-left:20px;
-  padding-top:10px;
-
-}
-
-h1{
-  font-size:22px;
-  padding-left:20px;
-  padding-top:70px;
+  margin-left: 50px;
+  margin-bottom: 50px;
 
 }

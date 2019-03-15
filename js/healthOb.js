@@ -23,7 +23,7 @@ function healthOb() {
         player.health =player.health+10
         this.x=Math.ceil(Math.random() * canvas.width/5)*5;
         this.y=Math.ceil(Math.random() * canvas.height/5)*5;
-        console.log('TE CURAS')
+        // console.log('TE CURAS')
     }
     else if(
       player2.x + player2.width >= this.x && 
@@ -34,9 +34,10 @@ function healthOb() {
         player2.health =player2.health+10
         this.x=Math.ceil(Math.random() * canvas.width/5)*5;
         this.y=Math.ceil(Math.random() * canvas.height/5)*5;
-        console.log('TE CURAS2')
+        // console.log('TE CURAS2')
     }
   }
+  
 
 //--------------------------------------OBJETO HEAL 2
 
@@ -63,8 +64,10 @@ healthBottle.prototype.collision = function(player) {
     this.y + this.height >= player.y
     ) {
       player.health =player.health+25
-      this.x = 1000;
-  }
+      this.x=Math.ceil(Math.random() * canvas.width/5)*5;
+      this.y=Math.ceil(Math.random() * canvas.height/5)*5;
+
+    }
   else if(
     player2.x + player2.width >= this.x && 
     this.x + this.width >= player2.x && 
@@ -72,6 +75,9 @@ healthBottle.prototype.collision = function(player) {
     this.y + this.height >= player2.y
     ) {
       player2.health =player2.health+25
-      this.x = 1000;
+      this.x=Math.ceil(Math.random() * canvas.width/5)*5;
+      this.y=Math.ceil(Math.random() * canvas.height/5)*5;
   }
 }
+
+
