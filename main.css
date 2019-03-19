@@ -40,7 +40,7 @@ canvas {
 .pic1{
   height:150px;
   width:150px;
-  content: url('http://static2.fjcdn.com/thumbnails/comments/Yeah+well+no+one+is+forcing+you+to+be+a+_2920236a3bc973de27a119933a63920f.png');
+  content: url('images/oldman1.png');
   margin-left: 35%;
   float:left;
 
@@ -48,7 +48,7 @@ canvas {
 .pic2{
   height:150px;
   width:150px;
-  content: url('http://plazmaburst2.com/forum/download/file.php?avatar=32547_1454800966.png');
+  content: url('images/oldwoman1.png');
   float:right;
   margin-right: 35%;
 
