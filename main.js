@@ -140,6 +140,8 @@ audio.play();
         document.getElementById("imggameover").style.display = "block";
         audio.pause();
         audioGameover.play();
+        player2.health = 100;
+        player.health = 100;
 
         }
         displayGameOver();
@@ -159,6 +161,8 @@ audio.play();
         document.getElementById("imggameover").style.display = "block";
         audio.pause();
         audioGameover.play();
+        player2.health = 100;
+        player.health = 100;
         }
         displayGameOver();
 
