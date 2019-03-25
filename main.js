@@ -151,7 +151,7 @@ audio.play();
         else {alert("Mala ruina tengas!");
         window.location.href = "index.html";
       }
-        },1000);
+        },100);
     }
     
     else if (player2.health <=3){
@@ -169,7 +169,7 @@ audio.play();
         else {alert("Mala ruina tengas!");
         window.location.href = "index.html";
       }
-        },500);
+        },100);
     }
   }
 
